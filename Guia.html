@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Elementos Estilísticos (Español a Lengua de Señas)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #e8f0f5;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        h3:hover {
+            background-color: #dbe7f0;
+        }
+        h3::after {
+            content: '+';
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        h3.expanded::after {
+            content: '-';
+            transform: rotate(0deg); /* No rotation needed for '-' */
+        }
+        .content {
+            display: none;
+            padding: 15px 20px;
+            border-left: 3px solid #2980b9;
+            background-color: #fcfcfc;
+            margin-bottom: 20px;
+        }
+        .content.show {
+            display: block;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures border-radius applies to children */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #4a69bd;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ecf0f1;
+            margin: 40px 0;
+        }
+        .note {
+            background-color: #e0f2f7;
+            border-left: 5px solid #007bb5;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+            color: #004d6e;
+        }
+        .attribution {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Responsive adjustments for tables on small screens */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+                padding: 10px 15px;
+            }
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            /* Add data-label attributes to your HTML <td> tags for these to work */
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">      
+         <h1>Guía de los Principales Elementos Estilísticos del Español para Intérpretes</h1>
+        <p>En el español, la forma en que se dicen las cosas es tan importante como lo que se dice. Los elementos estilísticos son herramientas retóricas que los hablantes y escritores usan para embellecer el lenguaje, enfatizar ideas, evocar emociones y persuadir. Para un intérprete, reconocerlos no es un mero ejercicio literario; es una necesidad para transferir el mensaje con toda su riqueza y propósito original, distinguiendo claramente el habla estilística de la cotidiana.</p>
+
+        <hr>
+
+        <h2>1. Figuras de Dicción (o de Palabra)</h2>
+        <p>Estas figuras afectan principalmente la forma de las palabras o la estructura gramatical de la oración, sin alterar su significado fundamental.</p>
+
+        <h3 onclick="toggleContent(this)">1.1. Onomatopeya</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Uso de palabras que imitan o sugieren el sonido de aquello que describen.</p>
+            <p><strong>Función:</strong> Añadir realismo, vivacidad y una experiencia sensorial al texto o discurso.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Palabras o expresiones que fonéticamente se asemejan al sonido que representan.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La Lengua de Señas no imita sonidos, sino los **efectos visuales o las características del movimiento** que los producen.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Movimiento o gesto visual] + [Expresión facial/corporal]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "El perro hacía *guau, guau*."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Para "El perro hacía *guau, guau*", el intérprete signaría la **acción del ladrido**: una personificación o seña icónica del movimiento repetitivo y rápido de la boca del perro, con una expresión facial que puede imitar la tensión del ladrido.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Personificación de la acción del ladrido (boca del perro)] + [Expresión facial de tensión/emoción]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">1.2. Anáfora</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Repetición de una o varias palabras al principio de versos o frases consecutivas.</p>
+            <p><strong>Función:</strong> Enfatizar una idea, crear ritmo, generar emoción y dar cohesión al discurso.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Palabra/Frase clave] + [Idea 1]`, `[Palabra/Frase clave] + [Idea 2]`, `[Palabra/Frase clave] + [Idea 3]...`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La **repetición espacial y rítmica** de una seña o patrón de signación para el elemento clave.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña/Secuencia clave, en un punto espacial] + [Contenido 1] // [Seña/Secuencia clave, en el mismo punto espacial] + [Contenido 2] // [Seña/Secuencia clave, en el mismo punto espacial] + [Contenido 3]...** (con posible acompañamiento de movimiento de cabeza o cuerpo rítmico).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "**Por** ti la verde hierba, **por** ti la sombra umbrosa, **por** ti el florido huerto."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Para este ejemplo, la seña de "POR-TI" (o "GRACIAS-A-TI") se signaría **en el mismo punto del espacio de signación** (quizás un movimiento de la mano hacia el interlocutor) antes de cada descripción. La **repetición de la seña y su ubicación espacial constante** crearían la anáfora visual.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña "POR-TI" (punto A)] + [VERDE HIERBA] // [Seña "POR-TI" (punto A)] + [SOMBRA] // [Seña "POR-TI" (punto A)] + [HUERTO FLORIDO]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">1.3. Paralelismo</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Repetición de una misma estructura gramatical o sintáctica en diferentes frases o versos. A diferencia de la anáfora, no necesariamente repite las mismas palabras al inicio, sino la *disposición* de los elementos.</p>
+            <p><strong>Función:</strong> Aportar ritmo, claridad, simetría y énfasis a las ideas, facilitando la memorización y la comprensión.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Oración]`, `[Oración opuesta]` (con diferentes palabras pero la misma estructura gramatical).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La duplicación o triplicación de un patrón de signación o movimiento espacial para estructuras conceptuales similares, **destacando el espacio y las señas que contrastan gracias a la flexión o conjugación**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Patrón visual para Estructura 1 - en un lado del espacio-] // [Patrón visual para Estructura 2 - en el lado opuesto del espacio-]** (manteniendo una similaridad en el tipo de movimiento, duración o ubicación general de las señas).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Tus ojos son la noche, tus labios son el día."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "TUS OJOS" seguido de una configuración de manos y expresión facial que evoque la **"OSCURIDAD/NOCHE"** (en un lado del espacio). Luego, "TUS LABIOS" seguido de una configuración de manos y expresión facial que evoque la **"LUZ/DÍA"** (en el lado opuesto del espacio). La **disposición espacial y visual** crea el paralelismo.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[TUS OJOS (seña en lado A)] + [OSCURIDAD/NOCHE (seña en lado A)] // [TUS LABIOS (seña en lado B)] + [LUZ/DÍA (seña en lado B)]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">1.4. Polisíndeton</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Uso excesivo o repetido e intencional de conjunciones (como "y", "o", "ni") dentro de una misma frase o serie de elementos.</p>
+            <p><strong>Función:</strong> Crear un efecto de lentitud, solemnidad, acumulación o énfasis, o para dar una sensación de flujo continuo.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Elemento 1] + [Conjunción] + [Elemento 2] + [Conjunción] + [Elemento 3]...`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Una sucesión de señas con **movimientos conectados o continuos**, a menudo con una ligera pausa o un movimiento repetitivo que imite el flujo de la conjunción.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña 1] + [Conexión visual fluida/movimiento repetitivo] + [Seña 2] + [Conexión visual fluida/movimiento repetitivo] + [Seña 3]...** (con posible uso de una expresión facial que denote acumulación o persistencia).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Y llora **y** gime **y** sufre **y** se lamenta."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Las señas para "LLORAR", "GEMIR", "SUFRIR" y "LAMENTARSE" se conectarían de forma fluida, con una **cadencia rítmica** y una **expresión facial persistente de angustia** que refleje la acumulación de acciones o emociones. El "y" se manifestaría en la continuidad del movimiento y la expresión.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[LLORAR (fluido)] + [GEMIR (fluido)] + [SUFRIR (fluido)] + [LAMENTARSE (fluido)] + [Expresión de angustia prolongada]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">1.5. Asíndeton</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Omisión intencional de conjunciones en una enumeración o serie de palabras o frases para dar mayor dinamismo o brevedad. Es el opuesto del polisíndeton.</p>
+            <p><strong>Función:</strong> Aportar rapidez, dinamismo, intensidad, brevedad o una sensación de acumulación sin pausa.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Elemento 1], [Elemento 2], [Elemento 3]...` (sin conjunciones).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Una secuencia de señas **rápidas, concisas y sin transiciones o pausas** que indiquen conexión, dando una sensación de enumeración abrupta y contundente.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña 1] // [Seña 2] // [Seña 3]...** (con movimientos secos y directos, sin conectores visuales y una expresión de resolución o rapidez).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Llegué, vi, vencí."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Las señas para "LLEGAR", "VER" y "VENCER" se ejecutarían de forma **rápida, contundente y sin transiciones suaves** entre ellas. Cada seña sería un golpe de información visual que culmina en la siguiente, transmitiendo la velocidad y la determinación.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[LLEGAR (rápido)] // [VER (rápido)] // [VENCER (rápido)]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">1.6. Elipsis</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Omisión de uno o varios elementos de una oración que se sobreentienden por el contexto o la gramática.</p>
+            <p><strong>Función:</strong> Lograr concisión, evitar repeticiones innecesarias o dar agilidad al lenguaje.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Una frase donde falta un elemento (generalmente un verbo o un sustantivo) que el receptor puede inferir.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Aprovechar la **gramática espacial y direccional** de la Lengua de Señas para elidir pronombres o verbos, y el contexto visual para no repetir sustantivos.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Elemento 1] + [Acción direccional/Clasificador] // [Elemento 2] + [Acción direccional/Clasificador]** (donde la dirección o el clasificador implica el elemento elidido).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Juan sabe leer; Pedro, escribir." (Se omite "sabe" en la segunda parte).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "JUAN SABER LEER". Luego, "PEDRO" y directamente "ESCRIBIR". El verbo "SABER" se elidiría en la segunda parte porque la **ubicación espacial de Pedro y la acción de escribir ya implican** que Pedro "sabe" escribir, manteniendo la concisión.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[JUAN (punto A)] + [SABER (verbo)] + [LEER] // [PEDRO (punto B)] + [ESCRIBIR]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>2. Figuras de Significado (o Tropos)</h2>
+        <p>Estas figuras alteran el significado habitual de las palabras o expresiones para crear un efecto expresivo o estético.</p>
+
+        <h3 onclick="toggleContent(this)">2.1. Metáfora</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Identificación de dos elementos (un término real y un término imaginario) que comparten una cualidad o semejanza, sin usar un conector comparativo. Se afirma que uno es el otro.</p>
+            <p><strong>Función:</strong> Enriquecer el lenguaje, crear imágenes poéticas, sugerir ideas complejas de forma concisa o embellecer la expresión.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Término real] + [Verbo ser/equivalente] + [Término imaginario]` o simplemente el **acoplamiento** de ambos.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">**Superposición o fusión visual** de conceptos, o la manifestación de una cualidad abstracta a través de una seña concreta.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña Término Real] + [Movimiento/Configuración que evoca Término Imaginario] + [Expresión de similitud/asombro]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Tus ojos son dos luceros."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "TUS OJOS" (señalando o cerca de los ojos). Seguido de un movimiento con las manos que evoque el **"brillo intenso y la luz"** de las estrellas, quizás con las manos abriéndose o los dedos destellando, y una expresión facial de **admiración o maravilla**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[TUS OJOS] + [Movimiento de "brillo/luz" con manos] + [Expresión de admiración]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.2. Símil (o Comparación)</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Establecimiento de una relación de semejanza explícita entre dos elementos, utilizando un conector comparativo ("como", "parece", "tal como", "cual", "así").</p>
+            <p><strong>Función:</strong> Clarificar una idea compleja, hacer una descripción más vívida y permitir al receptor imaginar la semejanza.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Elemento A] + [Conector comparativo] + [Elemento B]`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Seña de comparación ("COMO", "PARECER") o la **contigüidad visual** de los dos elementos con un movimiento que destaque la similitud.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña Elemento A] + [Seña 'COMO' o movimiento de comparación] + [Seña Elemento B] + [Expresión de similitud]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Sus manos eran **como** alas de mariposa."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "SUS MANOS". Luego, la seña de "COMO/SIMILAR" (a menudo un movimiento circular o balanceo de manos) seguido de la seña de "MARIPOSA" (manos que aletean). La **conexión del comparativo y la visualización de las alas** dejarían clara la semejanza.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[SUS MANOS] + [COMO/SIMILAR] + [MARIPOSA (aleteando)] + [Expresión de delicadeza]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.3. Metonimia</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Sustitución de una palabra por otra con la que guarda una relación de contigüidad, causa-efecto, parte-todo, autor-obra, continente-contenido, etc.</p>
+            <p><strong>Función:</strong> Aportar concisión, elegancia o un matiz cultural, aludiendo a un concepto a través de otro estrechamente relacionado.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Se usa una palabra para referirse a otra con la que tiene una conexión lógica.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Mostrar el elemento relacionado de forma clara, confiando en que el **contexto y el conocimiento cultural** del receptor permitan inferir el significado completo.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña del elemento relacionado] + [Contexto que infiere el significado completo]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Leer a Cervantes." (Se refiere a las obras de Cervantes, no a la persona).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "LEER" y luego el nombre "CERVANTES". Se entiende que uno lee sus "obras" porque "Cervantes" es el autor, y el contexto de la acción "leer" lo aclara.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[LEER] + [CERVANTES (nombre o seña icónica)]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.4. Antítesis</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Contraposición de dos ideas, expresiones o palabras de significado opuesto dentro de una misma frase o en frases cercanas.</p>
+            <p><strong>Función:</strong> Resaltar una contradicción, un contraste, o generar tensión, llamando la atención sobre las diferencias.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Idea A (opuesta)] + [Idea B (opuesta)]`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Uso del **espacio de signación para separar visualmente** los conceptos opuestos, con posibles cambios de dirección o expresión facial que enfaticen el contraste.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña Idea A -en un lado del espacio-] // [Seña Idea B -en el lado opuesto del espacio-] + [Expresión facial de contraste/oposición]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Es tan **corto** el amor **y** tan **largo** el olvido."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "AMOR" con una seña pequeña o rápida hacia un lado. Inmediatamente después, se signaría "OLVIDO" con una seña amplia o sostenida hacia el lado opuesto del espacio, acompañado de una **expresión facial que acentúe la diferencia o la paradoja**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[AMOR (seña pequeña en lado A)] // [OLVIDO (seña amplia en lado B)] + [Expresión de contraste]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.5. Paradoja</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Unión de dos ideas aparentemente contradictorias, pero que, al reflexionarlas, juntas encierran un sentido profundo, una verdad oculta o una incongruencia significativa.</p>
+            <p><strong>Función:</strong> Provocar reflexión, desafiar la lógica convencional, o expresar una idea compleja de forma impactante.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Afirmación 1] + [Afirmación 2 (aparentemente contradictoria)]`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Presentación de los conceptos contradictorios con una **expresión no manual que denote perplejidad, reflexión o la ironía** de la contradicción.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña Concepto 1] + [Seña Concepto 2 (contradictorio)] + [Expresión facial de perplejidad/contradicción]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Vivo sin vivir en mí."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se signaría "VIVIR" (el hecho de estar vivo). Luego, una negación visual ("NO" o un movimiento de cabeza de negación) y la seña de "VIVIR/SOLEDAD", con una **expresión facial que muestre la confusión o la profunda introspección** de la idea. La contradicción se visualiza en la acción y la negación.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[VIVIR] + [NO (movimiento de negación)] + [VIVIR/SOLEDAD] + [Expresión de introspección/confusión]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.6. Oxímoron</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Tipo de paradoja que consiste en la combinación de dos términos de significado opuesto o contradictorio en una misma expresión, creando un nuevo sentido.</p>
+            <p><strong>Función:</strong> Sorprender, generar un efecto poético, o describir algo de manera que trascienda la lógica habitual.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">`[Adjetivo contradictorio] + [Sustantivo]` o `[Sustantivo] + [Adjetivo contradictorio]`</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">**Acoplamiento de señas o clasificadores opuestos**, con una expresión facial que marque la incongruencia. La clave es la **simultaneidad o la transición fluida** para mostrar la contradicción inherente.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña/Clasificador 1 (opuesto)] + [Seña/Clasificador 2 (opuesto) SIMULTÁNEO O EN TRANSICIÓN] + [Expresión facial de incongruencia/sorpresa]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Un **silencio atronador**."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La seña para **"SILENCIO"** (mano cerca de la boca) se realizaría. **SIMULTÁNEAMENTE o en una transición muy fluida**, se realizaría un **movimiento amplio y potente** que evoque un "trueno" o un "ruido fuerte" (manos que se expanden bruscamente). Todo esto, acompañado de una **expresión facial de asombro o choque**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[SILENCIO (seña)] + [MOVIMIENTO DE TRUENO/RUIDO FUERTE (simultáneo)] + [Expresión de asombro/contradicción]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.7. Ironía</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Expresar una idea o una opinión utilizando palabras que significan lo contrario de lo que realmente se piensa o se quiere comunicar, generalmente con un tono de burla, sarcasmo o doble sentido.</p>
+            <p><strong>Función:</strong> Criticar, satirizar, generar humor o expresar desaprobación de manera indirecta y sutil.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">El **significado real** es opuesto al **significado literal** de las palabras, y se infiere por el contexto, el tono de voz o la situación.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La seña literal se acompaña de un **componente no manual (expresión facial, postura corporal o movimiento de ojos) que contradice el mensaje verbal**, indicando el sarcasmo.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña literal] + [Componente no manual que contradice el literal (ojos en blanco, sonrisa irónica, movimiento de cabeza sutil)]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "¡Qué puntual eres!" (dicho a alguien que llega muy tarde).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La seña de "PUNTUAL" se signaría, pero se acompañaría de una **expresión facial sarcástica, un ligero movimiento de ojos hacia un lado, o un tono de signación más lento y deliberado** que denote que el signante piensa lo contrario.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[PUNTUAL (seña)] + [Expresión facial sarcástica/ojos en blanco]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.8. Eufemismo</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Sustitución de una palabra o expresión que se considera malsonante, ofensiva, tabú o demasiado directa, por otra más suave, decorosa o indirecta.</p>
+            <p><strong>Función:</strong> Suavizar la realidad, ser respetuoso o evitar un impacto negativo.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Un término más aceptable reemplaza a uno que no lo es.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Usar señas más abstractas, poéticas o indirectas, o que representen un concepto relacionado pero menos confrontativo.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña/Secuencia que evoca el concepto de forma indirecta/suave]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Pasar a mejor vida" (en lugar de "morir").</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">En lugar de la seña directa de "MORIR", se podría usar una seña que evoque una **"transición suave"**, como una personificación que se eleva o se desvanece lentamente, o una seña que signifique "DESCANSAR" o "PAZ ETERNA", con una expresión facial de serenidad.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[PERSONIFICACIÓN (que se eleva/desvanece)] + [Expresión de serenidad/paz]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">2.9. Hipérbole</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Exageración desmedida de un hecho, una cualidad, una cantidad o una circunstancia.</p>
+            <p><strong>Función:</strong> Enfatizar una idea, impresionar, generar un efecto cómico o dramático.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Una afirmación que excede la realidad de forma notoria.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">**Amplificación del movimiento de la seña**, uso de todo el espacio de signación, repetición exagerada o expresiones faciales intensas.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña o acción base con movimiento/tamaño/repetición exagerada] + [Expresión facial de asombro/cansancio/énfasis]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Te lo he dicho un millón de veces."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La seña de "DECIR" o "REPETIR" se ejecutaría con un **movimiento muy amplio, abarcando gran parte del espacio de signación**, o con una **repetición extremadamente rápida y continua**, acompañada de una **expresión facial de agotamiento o exasperación**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[DECIR/REPETIR (seña con movimiento amplio/repetido)] + [Expresión de agotamiento/énfasis]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>3. Modos de Decir Populares</h2>
+        <p>Estas son expresiones consolidadas en el lenguaje, que encapsulan sabiduría o formas comunes de referirse a situaciones. La clave es **visualizar el concepto** más que traducir palabras, manteniendo la esencia estructural de "situación-consecuencia" o "concepto-descripción". Aquí, la diferencia con el habla cotidiana es fundamental: estas expresiones buscan un impacto, una enseñanza, o una descripción más vívida y memorable.</p>
+
+        <h3 onclick="toggleContent(this)">3.1. Refranes</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Dichos populares breves y sentenciosos que expresan una verdad o un consejo de sabiduría popular, a menudo de carácter moral, didáctico o práctico, transmitidos por tradición. Suelen tener un sentido figurado.</p>
+            <p><strong>Función:</strong> Transmitir enseñanzas morales, consejos prácticos, observaciones sobre la vida o advertencias de manera concisa y memorable.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Comúnmente una **estructura binaria** (o dicotómica) de **Situación-Consecuencia** (causa-efecto o condicional implícita).</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">**Personificación** de la flojera, la tranquilidad o el descuido; **transformación de un estado a una acción contundente o negativa**. Uso del espacio para separar la situación y la consecuencia, con un movimiento que las conecta.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Visualización de la Situación (personificación, seña de estado, movimiento)] + [Movimiento de transformación/conexión] + [Visualización de la Consecuencia (personificación, seña de acción, expresión de impacto)]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "**Camarón que se duerme**, se lo lleva la corriente."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">**Visualización de la Situación:** Una mano abierta (configuración de "B" o "5") se coloca sobre el pecho y baja lentamente hacia el estómago, con una expresión de **calma, relajación o incluso pereza**. Representa la **"tranquilidad" o "estar adormilado/descuidado"**. **Movimiento de Conexión/Transformación:** La misma mano se mueve bruscamente desde el estómago hacia el cuello, realizando un **movimiento rápido y cortante**, como una "cuchilla". **Visualización de la Consecuencia:** La acción de "cortar el cuello" metafóricamente representa una **consecuencia fatal o una pérdida drástica**. La expresión facial pasaría de la calma al **impacto o la severidad**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[MANO ABIERTA (bajando en pecho/estómago, expresión de calma)] + [MANO ABIERTA (movimiento brusco al cuello, como cuchilla)] + [Expresión de impacto/severidad]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "A caballo regalado no se le mira el diente."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Iniciar con la seña de **"REGALO" o "GRATIS"**. Luego, con una mano (configuración de "ojo" o "inspección") realizar un **movimiento cercano al regalo que acaba de recibir, como si estuviera examinando con desconfianza**, con una **expresión facial de escrutinio o suspicacia**. Inmediatamente, esa acción se interrumpe con un **golpe suave de la otra mano (como negando)** o un movimiento de cabeza de **"NO"**, con una **expresión final de aceptación contenta y no cuestionadora**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[REGALO/GRATIS (seña)] + [MANO "OJO" (movimiento de inspección al regalo, expresión suspicaz)] + [MANO CERRADA (golpe negando) o Cabeza "NO" + Expresión de aceptación]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">3.2. Adagios</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Sentencias breves, de origen popular (aunque a veces de autor conocido), que expresan un pensamiento moral o una enseñanza. Son muy similares a los refranes, pero suelen ser más concisos, de carácter más serio o didáctico, y menos dados al juego de palabras o rima.</p>
+            <p><strong>Función:</strong> Ofrecer una máxima moral o una regla de conducta de forma más directa y universal que un refrán.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">También suelen seguir una **estructura binaria de situación-consecuencia o de contraste**, pero de forma más directa y sin tanta elaboración narrativa.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Visualizar la prolongación de un estado y luego la limitación o colapso de la capacidad de afrontarlo, utilizando **personificación** y el cuerpo.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña/Visualización de "MAL"/Problema] + [Movimiento/personificación de "LARGO TIEMPO"/Persistencia] // [Seña de "CUERPO"/Persona] + [Negación/Movimiento de colapso/Límite + Expresión de agotamiento/rendición]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "No hay mal que dure cien años, ni cuerpo que lo resista."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">El signante podría empezar con una seña de **"PROBLEMA" o "SUFRIMIENTO"**. Seguido de un movimiento con el brazo extendido que se mantiene o se mueve lentamente hacia adelante para representar **"LARGO TIEMPO" o "DURACIÓN"**. Luego, una personificación de "PERSONA" o su propio cuerpo para representar la **"resistencia" o "fuerza"**, que luego **"colapsa" o se "debilita"** con un movimiento hacia abajo o una expresión de agotamiento.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[PROBLEMA/SUFRIMIENTO (seña)] + [BRAZO EXTENDIDO (movimiento de duración)] // [PERSONA (personificación de cuerpo)] + [Movimiento de colapso/debilidad + Expresión de agotamiento]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">3.3. Dichos</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Expresiones o frases hechas de uso común que no necesariamente tienen un sentido moral o didáctico tan marcado como los refranes o adagios. Se usan comúnmente en el habla para expresar una idea de manera pintoresca, coloquial o particular.</p>
+            <p><strong>Función:</strong> Describir una situación, un estado de ánimo o una característica de forma breve y evocadora, sin pretender una enseñanza universal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Más variada, a menudo descriptiva de una **situación o estado** que evoca una imagen mental. Pueden ser simplemente una frase nominal o una descripción verbal.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Ubicar el concepto mentalmente en un espacio visual, usar **personificaciones** o expresiones faciales para describir el estado.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña de la Persona/Sujeto] + [Ubicación espacial metafórica (arriba, lejos)] + [Expresión facial/gesto que denote la cualidad/estado]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "Estar en las nubes."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Se podría señalar a la persona (o a uno mismo) y luego hacer una seña o personificación para **"NUBES" o "AIRE" con movimientos ligeros y elevados**, acompañado de una **expresión facial de distracción, de "mirada perdida" o "pensando en otra cosa"**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[PERSONA/YO (señalando)] + [NUBES/AIRE (seña elevada, movimientos ligeros)] + [Expresión de distracción/mirada perdida]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 onclick="toggleContent(this)">3.4. Sentencias</h3>
+        <div class="content">
+            <p><strong>Definición:</strong> Frases breves que encierran una enseñanza o una máxima de carácter general y profundo, a menudo de naturaleza filosófica o moral, y con una autoridad o solemnidad mayor que un refrán. Pueden ser de autor conocido o anónimo, y buscan establecer una verdad universal.</p>
+            <p><strong>Función:</strong> Proclamar una verdad inmutable, ofrecer una reflexión profunda o establecer un principio de comportamiento.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estructura en Español</th>
+                        <th>Ideas Visuales para Lengua de Señas</th>
+                        <th>Estructura en Lengua de Señas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Estructura en Español">Concisa y directa, a menudo con una **estructura simple de sujeto-predicado** o una **relación directa de causa-efecto** sin adornos retóricos, enfocándose en la claridad de la verdad que enuncian.</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">Impacto directo de un concepto sobre otro, con una visualización clara de la "verdad" y el "dolor" a través de una **transición fluida de señas que transforman el significado**, logrando un carácter más estilístico y "rebuscado".</td>
+                        <td data-label="Estructura en Lengua de Señas">**[Seña de Concepto 1 con origen y dirección específica] + [Transición fluida de la seña que se transforma en Concepto 2] + [Expresión de la emoción asociada]**</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Estructura en Español">**Ejemplo en español:** "La verdad duele."</td>
+                        <td data-label="Ideas Visuales para Lengua de Señas">La seña de **"VERDAD" saldría desde la boca** (para darle un carácter más visual de palabra verdadera o revelación). En el **trayecto de la seña, se transformaría fluidamente en la seña de un "punzón" o "puñal"** que se dirige directamente al corazón de quien recibe dicha verdad. La expresión facial acompañaría la transformación de la seña, pasando de la franqueza inicial a una de **impacto o aflicción**. Esta **transición visual y metafórica de la seña es lo que da el carácter estilístico**.</td>
+                        <td data-label="Estructura en Lengua de Señas">**[VERDAD (seña saliendo de boca)] + [SEÑA PUNZÓN/PUÑAL (transformación en el trayecto hacia el corazón)] + [Expresión de impacto/aflicción]**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <h3>Importancia para el Intérprete</h3>
+            <p>Reconocer estos elementos estilísticos en el español es crucial para un intérprete. No se trata solo de traducir palabras, sino de **traducir la intención, el énfasis, la emoción y la belleza** del mensaje original. Al identificar estas figuras, podrás elegir las estrategias de interpretación más adecuadas en Lengua de Señas, utilizando el espacio, las personificaciones y los componentes no manuales para recrear el efecto estilístico y transmitir la riqueza del español a la comunidad sorda, **marcando la diferencia con lo que sería un habla cotidiana, normal, sin estilo.**</p>
+        </div>
+
+        <p class="attribution">Guía creada por Bliomar J Requena. Para cualquier duda, no dude en comunicarse directamente conmigo.</p>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            element.classList.toggle('expanded');
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+            } else {
+                content.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
